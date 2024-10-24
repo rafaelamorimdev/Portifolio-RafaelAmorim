@@ -52,7 +52,7 @@ export function Hero () {
 
             <div className="hidden lg:block">
                     <figure className="w-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-sky-300 to-sky-65% rounded-[60px] overflow-hidden">
-                    <img src="images/1.png" 
+                    <img src="/images/1.png" 
                     alt=""
                      width={656}
                      height={800}
