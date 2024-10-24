@@ -1,8 +1,12 @@
-import { ButtonPrimary, ButtonOutline } from "../Button/Button"
+import { ButtonOutline } from "../Button/Button"
+import  DownloadButton from "../../Currículo/Document"
 
-import Curriculum from './Currículo/CvRafaelAmorim.pdf'; 
+
+
 
 export function Hero () {
+
+    
     return <section
      id="home"
      className="pt-28 lg:pt-36">
@@ -26,13 +30,17 @@ export function Hero () {
                 </div>
                 <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 ">Construindo Websites Modernos e Escaláveis.</h2>
                 <div className=" flex items-center gap-3">
-                    <ButtonPrimary 
+                    <DownloadButton 
                     label="Download CV"
                     icon="Download"
-                    href={Curriculum}
-                    Download
+                    onClick={DownloadButton}
+                    
                     
                     />
+                    
+                   
+                    
+                    
 
                     <ButtonOutline
                     href="about"

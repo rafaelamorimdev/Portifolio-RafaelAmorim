@@ -53,7 +53,7 @@ export function Skill () {
             </h2>
 
             <p className="text-zinc-400 mt-3 mb-8 max-w-[60ch] reveal-up">
-            Descubra as poderosas ferramentas e tecnologias que utilizo para criar sites excepcionais e aplicativos de alto desempenho.
+            Descubra poderosas ferramentas e tecnologias que utilizo para criar sites excepcionais e aplicativos de alto desempenho.
 
             </p>
 
