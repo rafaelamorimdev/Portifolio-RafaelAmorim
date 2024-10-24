@@ -15,7 +15,7 @@ Convido você a explorar meu portfólio e ver exemplos do meu trabalho. Ficarei 
                 <div className="flex flex-wrap items-center gap-4 md:gap-7 ">
                     
                 <img 
-                src="images/logoRafa4.svg" 
+                src="/images/logoRafa4.svg" 
                 alt="Logo"
                 width={110}
                 height={110}
