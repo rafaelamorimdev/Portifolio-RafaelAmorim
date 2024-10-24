@@ -13,7 +13,7 @@ export function Header () {
                 <h1>
                     <a href="/" className="logo">
                      
-                    <img src="/public/images/logo-rafa.svg" width={120} height={120} /></a>
+                    <img src="images/logo-rafa.svg" width={120} height={120} /></a>
                 </h1>
 
                 <div className="relative md:justify-self-center">
