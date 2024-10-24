@@ -1,7 +1,7 @@
 import { ButtonOutline } from "../Button/Button"
 import  DownloadButton from "../../Currículo/Document"
 
-import {Logo} from "../../../public/images/logoRafa"
+
 
 
 export function Hero () {
@@ -15,7 +15,7 @@ export function Hero () {
             <div>
                 <div className="flex items-center gap-3">
                     <figure className="img-box w-9 h-9 rouded-lg">
-                        <img src={Logo} 
+                        <img src="/public/images/hero-banner.png" 
                         width={40}
                         height={40}
                         alt="Rafael Amorim Portrait"
