@@ -6,6 +6,7 @@ import Work  from './Components/Portifólios/Work';
 //import Review from './Components/Cards/Review'
 import Contact from './Components/Contatos/Contact';
 import Footer from './Components/Contatos/Footer';
+// Import the PDF file
 
 /*Node Modules*/
 import { ReactLenis } from 'lenis/react'
@@ -50,8 +51,7 @@ export function App() {
         <Contact/>
     </main>
         <Footer/>
+        
     </ ReactLenis>
   );
 }
-
-

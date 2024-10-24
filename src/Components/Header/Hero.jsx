@@ -1,6 +1,6 @@
 import { ButtonPrimary, ButtonOutline } from "../Button/Button"
 
-import Curriculo from '/public/currículo/CvRafaelAmorim.pdf'
+import Curriculum from './Currículo/CvRafaelAmorim.pdf'; 
 
 export function Hero () {
     return <section
@@ -29,8 +29,10 @@ export function Hero () {
                     <ButtonPrimary 
                     label="Download CV"
                     icon="Download"
-                    href={Curriculo}
-                    Download/>
+                    href={Curriculum}
+                    Download
+                    
+                    />
 
                     <ButtonOutline
                     href="about"
