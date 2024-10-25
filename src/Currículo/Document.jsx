@@ -3,7 +3,7 @@
 const DownloadButton = () => {
     const handleDownloadClick = () => {
         const link = document.createElement('a');
-        link.href = '/Currículo/CvRafaelAmorim.pdf'; // Caminho do PDF
+        link.href = 'Currículo/CvRafaelAmorim.pdf'; // Caminho do PDF
         link.download = 'CvRafaelAmorim.pdf'; // Nome do arquivo que será baixado
         document.body.appendChild(link);
         link.click(); // Simula o clique no link
