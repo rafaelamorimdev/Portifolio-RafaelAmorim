@@ -1,7 +1,7 @@
 import { ButtonOutline } from "../Button/Button"
 import  DownloadButton from "../../Currículo/Document"
 
-import {DownloadPDF} from "Services/firebase.jsx"
+import {DownloadPDF} from "../Services/firebase"
 
 
 export function Hero () {
