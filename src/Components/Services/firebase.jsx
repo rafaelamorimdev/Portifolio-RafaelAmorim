@@ -26,7 +26,7 @@
                     link.href = url;
                     link.download = 'CvRafaelAmorim.pdf'; 
                     document.body.appendChild(link);
-                    link.click();
+                    link.click({DownloadPDF});
                     document.body.removeChild(link);
                 })
                 .catch((error) => {
