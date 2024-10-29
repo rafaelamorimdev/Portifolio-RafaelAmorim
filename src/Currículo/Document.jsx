@@ -1,21 +1,31 @@
+import { getStorage, ref, getDownloadURL } from "firebase/storage";
+import { App } from "../App";
 
-
-const DownloadButton = () => {
-    const handleDownloadClick = () => {
-        const link = document.createElement('a');
-        link.href = 'Currículo/CvRafaelAmorim.pdf'; // Caminho do PDF
-        link.download = 'CvRafaelAmorim.pdf'; // Nome do arquivo que será baixado
-        document.body.appendChild(link);
-        link.click(); // Simula o clique no link
-        document.body.removeChild(link); // Remove o link do DOM
-        
+const storage = getStorage (App)
+    const DownloadPDF = () => {
+        const handleDownload = () => {
+            const pdfRef = ref(storage, 'CvRafaelAmorim.pdf');
+    
+            getDownloadURL(pdfRef)
+                .then((url) => {
+                    // Criar um link para download
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = 'CvRafaelAmorim.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                })
+                .catch((error) => {
+                    console.error("Erro ao obter a URL de download:", error);
+                });
+        };
+    
+        return (
+            <button onClick={handleDownload}>
+                Download CV
+            </button>
+        );
     };
-
-    return (
-        <button onClick={handleDownloadClick} className="btn btn-primary">
-            Download CV
-        </button>
-    );
-};
-
-export default DownloadButton;
+    
+    export default DownloadPDF;

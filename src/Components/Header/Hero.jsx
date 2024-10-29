@@ -1,5 +1,5 @@
 import { ButtonOutline } from "../Button/Button"
-import  DownloadButton from "../../Currículo/Document"
+
 
 import {DownloadPDF} from "../Services/firebase"
 
@@ -30,7 +30,7 @@ export function Hero () {
                 </div>
                 <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 ">Construindo Websites Modernos e Escaláveis.</h2>
                 <div className=" flex items-center gap-3">
-                    <DownloadButton 
+                    <DownloadPDF 
                     label="Download CV"
                     icon="Download"
                     onClick={DownloadPDF}
