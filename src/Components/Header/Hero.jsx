@@ -1,7 +1,7 @@
 import { ButtonOutline } from "../Button/Button"
 import  DownloadButton from "../../Currículo/Document"
 
-import {DownloadPDF} from "../Services/firebase"
+
 
 
 export function Hero () {
@@ -33,7 +33,7 @@ export function Hero () {
                     <DownloadButton 
                     label="Download CV"
                     icon="Download"
-                    onClick={DownloadPDF}
+                    onClick={DownloadButton}
                     
                     
                     />

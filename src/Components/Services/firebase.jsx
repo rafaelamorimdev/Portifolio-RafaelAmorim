@@ -16,7 +16,7 @@
         const storage = getStorage(app);
 
         // Função para baixar o PDF
-       export function DownloadPDF() {
+        function downloadPDF() {
             const pdfRef = ref(storage, 'CvRafaelAmorim.pdf'); 
 
             getDownloadURL(pdfRef)
@@ -34,4 +34,4 @@
                 });
             }
 
-            export default DownloadPDF;
+            export default downloadPDF;
