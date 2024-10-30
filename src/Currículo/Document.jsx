@@ -24,7 +24,7 @@ export function DownloadButton  ()  {
             .then((url) => {
                 
                 const link = document.createElement('a');
-                link.href = url;
+                link.href = ("gs://portifoliorafaamorim.appspot.com", url);
                 
                 link.download = 'pdfs/rafaelAmorim.pdf'; 
                 document.body.appendChild(link);
