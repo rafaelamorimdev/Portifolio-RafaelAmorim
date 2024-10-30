@@ -18,7 +18,7 @@ const app = initializeApp(firebaseConfig);
 export function DownloadButton  ()  {
     
     const DownloadPDF =() => {
-        const pdfRef = ref(storage, 'pdfs/rafaelAmorim.pdf.pdf'); 
+        const pdfRef = ref(storage, 'pdfs/rafaelAmorim.pdf'); 
 
         getDownloadURL(pdfRef)
             .then((url) => {
@@ -26,7 +26,7 @@ export function DownloadButton  ()  {
                 const link = document.createElement('a');
                 link.href = url;
                 
-                link.download = 'pdfs/rafaelAmorim.pdf.pdf'; 
+                link.download = 'pdfs/rafaelAmorim.pdf'; 
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
