@@ -1,14 +1,16 @@
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js';
         import { getStorage, ref, getDownloadURL } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-storage.js';
-
+        
+        
         // Configuração do Firebase
         const firebaseConfig = {
-            apiKey: "AIzaSyCwea0ZIkplhXxQpKqBImrAvkOdMsuAQdk",
-            authDomain: "portifoliorafaamorim.firebaseapp.com",
-            projectId: "portifoliorafaamorim",
-            storageBucket: "portifoliorafaamorim.appspot.com",
-            messagingSenderId: "168353822866",
-            appId: "1:168353822866:web:7782afe9e3158956584e4b"
+            apiKey: import.meta.env.REACT_APP_API_KEY,
+            authDomain: import.meta.env.REACT_APP_AUTH_DOMAIN,
+            
+            projectId: import.meta.env.REACT_APP_PROJECT_ID,
+            storageBucket: import.meta.env.REACT_APP_STORAGE_BUCKET,
+            messagingSenderId: import.meta.env.REACT_APP_MESSAGING_SENDER_ID,
+            appId: import.meta.env.REACT_APP_APP_ID
         };
 
         // Inicializar o Firebase
