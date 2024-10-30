@@ -18,7 +18,7 @@ const app = initializeApp(firebaseConfig);
 export function DownloadButton  ()  {
     
     const DownloadPDF =() => {
-        const pdfRef = ref(storage, 'rafaelAmorim.pdf'); 
+        const pdfRef = ref(storage, 'rafaelAmorim.pdf.pdf'); 
 
         getDownloadURL(pdfRef)
             .then((url) => {
@@ -26,7 +26,7 @@ export function DownloadButton  ()  {
                 const link = document.createElement('a');
                 link.href = ("portifoliorafaamorim.appspot.com", url);
                 
-                link.download = 'rafaelAmorim.pdf'; 
+                link.download = 'rafaelAmorim.pdf.pdf'; 
                 document.body.appendChild(link);
                 link.click(url);
                 document.body.removeChild(link);
