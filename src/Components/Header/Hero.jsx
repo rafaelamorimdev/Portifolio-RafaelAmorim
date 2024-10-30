@@ -1,6 +1,6 @@
 import { ButtonOutline } from "../Button/Button"
 import   DownloadButton from "../../Currículo/Document"
-import Downloadpdf from  "../../Currículo/Document"
+//import Downloadpdf from  "../../Currículo/Document"
 
 
 
@@ -35,7 +35,7 @@ export function Hero () {
                     label="Download CV"
                     icon="Download"
                     
-                    onClick={Downloadpdf}
+                    onClick={DownloadButton}
                     
                     
                     />
