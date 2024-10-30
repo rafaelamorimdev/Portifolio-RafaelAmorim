@@ -28,7 +28,7 @@ export function DownloadButton  ()  {
                 
                 link.download = 'rafaelAmorim.pdf'; 
                 document.body.appendChild(link);
-                link.click();
+                link.click(url);
                 document.body.removeChild(link);
             })
             .catch((error) => {
