@@ -1,18 +1,44 @@
 
+//import downloadPDF from "../Components/Services/firebase";
+import { getDownloadURL, ref, getStorage } from "firebase/storage";
+import { initializeApp} from "firebase/app";
 
-const DownloadButton = () => {
-    const handleDownloadClick = () => {
-        const link = document.createElement('a');
-        link.href = 'Currículo/CvRafaelAmorim.pdf'; // Caminho do PDF
-        link.download = 'CvRafaelAmorim.pdf'; // Nome do arquivo que será baixado
-        document.body.appendChild(link);
-        link.click(); // Simula o clique no link
-        document.body.removeChild(link); // Remove o link do DOM
-        
-    };
+const firebaseConfig = {
+    apiKey: "AIzaSyCwea0ZIkplhXxQpKqBImrAvkOdMsuAQdk",
+    authDomain: "portifoliorafaamorim.firebaseapp.com",
+    projectId: "portifoliorafaamorim",
+    storageBucket: "portifoliorafaamorim.appspot.com",
+    messagingSenderId: "168353822866",
+    appId: "1:168353822866:web:7782afe9e3158956584e4b"
+};
+
+const app = initializeApp(firebaseConfig);
+        const storage = getStorage( app );
+
+export function DownloadButton  ()  {
+    
+    const DownloadPDF =() => {
+        const pdfRef = ref(storage, 'pdfs/rafaelAmorim.pdf.pdf'); 
+
+        getDownloadURL(pdfRef)
+            .then((url) => {
+                
+                const link = document.createElement('a');
+                link.href = url;
+                
+                link.download = 'pdfs/rafaelAmorim.pdf.pdf'; 
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            })
+            .catch((error) => {
+                console.error("Erro ao obter a URL de download:", error);
+            });
+        }
+
 
     return (
-        <button onClick={handleDownloadClick} className="btn btn-primary">
+        <button onClick={DownloadPDF} className="btn btn-primary">
             Download CV
         </button>
     );
