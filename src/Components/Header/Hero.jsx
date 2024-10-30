@@ -34,7 +34,7 @@ export function Hero () {
                     <DownloadButton 
                     label="Download CV"
                     icon="Download"
-                    download={DownloadButton}
+                    target="_blank"
                     onClick={DownloadButton}
                     
                     

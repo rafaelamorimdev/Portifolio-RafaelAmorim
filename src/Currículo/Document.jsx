@@ -38,7 +38,7 @@ export function DownloadButton  ()  {
 
 
     return (
-        <button onClick={DownloadPDF}  className="btn btn-primary">
+        <button onClick={DownloadPDF} target="_blank" className="btn btn-primary">
             Download CV
         </button>
     );
